@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+  <title>rifa</title>
+
+  <!--<meta http-equiv="content-type" content="text/html; charset=windows-1252" />-->
+  <meta charset=utf-8"/>  
+  <script src="numeral.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		var titulo = "Rifa Beneficente: Um leitão &nbsp;&nbsp;&nbsp; ou &nbsp;&nbsp;&nbsp; R$ 150,00 (em dinheiro)";
+		var data = "Sorteio: 19 de maio de 2018";
+		var local = "Casa da Claudia Soares da Silva";
+		var valor = "R$ 3,00";
+		var final = 400;
+		var cont = 1;
+
+		document.write('<div class="container">');
+
+		for (var inicio = 1;  inicio <= final; inicio++) {
+
+		document.write('<div id="rifa">');
+			
+			document.write('<div id="canhoto">');
+				document.write('<p class="negrito">'+titulo+'</p>');
+				document.write('<p class="linha">Nome:</p>');
+				document.write('<p class="linha">Endereço:</p>');
+				document.write('<p class="linha">Telefone:</p>');
+				document.write('<p class="numero">Valor: <span class="destaque">'+valor+'</span> &nbsp;&nbsp;&nbsp;&nbsp; Nº <span class="destaque">'+inicio+'</span> </p>');
+			document.write('</div>');
+
+			document.write('<div id="corpo">');
+
+				document.write('<table><tr>');
+				document.write('<td>');
+
+				document.write('<p class="foto"> <img src="IMG/cash.png">  </p>');
+
+				document.write('</td>');
+
+				document.write('<td>');
+                                                                                                                      
+				document.write('<p class="titulo">'+titulo+'</p>');
+				document.write('<p>'+data+'</p>');
+				document.write('<p>Local: '+local+'</p>');
+				document.write('<p class="numero">Valor: <span class="destaque">'+valor+'</span> &nbsp;&nbsp;&nbsp;&nbsp; Nº <span class="destaque">'+inicio+'</span> </p>');
+
+				document.write('</td>');
+
+				document.write('</tr></table>');
+
+			document.write('</div>');
+		
+		document.write('</div>');
+
+			// a cada 6 rifas cria uma quebra de linha
+			if (cont == 6){
+				document.write('<p class="quebra-linha"></p>');
+				cont = 1;
+			}else{
+				cont ++;
+			}
+
+		}// fecha for
+
+		document.write('</div>');		
+
+	</script>
+
+</body>
+</html>
+
